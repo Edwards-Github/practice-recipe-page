@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-  width: 30%;
+  width: 100%;
+  max-width: 700px;
   background-color: hsl(0, 0%, 100%);
   font-size: 16px;
   font-family: "Outfit", sans-serif;
@@ -29,19 +30,21 @@ body {
   font-family: 'YoungSerif';
 }
 
+.preparation-container {
+  background-color: hsl(330, 100%, 98%);
+}
+
 .preparation-title {
   color: hsl(332, 51%, 32%);
-  background-color: hsl(330, 100%, 98%);
   margin-bottom: 0px;
   padding-top: 10px;
   padding-left: 20px;
 }
 
 .preparation {
-  background-color: hsl(330, 100%, 98%);
+  padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 50px;
-  padding-top: 10px;
   margin: 0px;
 }
 
@@ -71,8 +74,7 @@ li::marker {
 }
 
 .table {
-  display: flex;
-  justify-content: space-evenly;
+  width: 100%;
 }
 
 .table-row {
@@ -81,31 +83,87 @@ li::marker {
   border-bottom: 1px rgb(212, 207, 207) solid;
 }
 
-.nutrition {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px rgb(212, 207, 207) solid;
-  padding-left: 30px;
-  padding-right: 150px;
+td {
+  width: 50%;
+  padding-left: 10%;
   padding-bottom: 5px;
-  padding-top: 5px;
-  margin: 5px;
 }
+
+.table-row:last-child {
+  border: none;
+}
+
 
 .last-nutrition {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 150px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px 150px 5px 5px;
   margin: 5px;
 }
 
 .nutrition-data {
   color: hsl(14, 45%, 36%);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    background-color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 600px) {
+    .recipe-image {
+      width: 100%;
+      border-radius: 0px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .recipe-title {
+      padding: 0 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .recipe-description {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .preparation-container {
+      margin: 0 20px;
+    }
+  }
+
+    @media (max-width: 600px) {
+    .title {
+      padding: 0 20px;
+    }
+  }
+
+    @media (max-width: 600px) {
+    .nutrition-description {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .table {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .instructions {
+      padding: 0 20px;
+    }
+  }
 }
